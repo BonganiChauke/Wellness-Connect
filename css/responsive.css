@@ -1,0 +1,428 @@
+*{
+
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+body{
+
+  max-width: 900px;
+  margin: auto;
+  font-family: Arial, Helvetica, sans-serif;
+  scroll-behavior: smooth;
+
+}
+
+@media  (max-width: 480px) {
+  
+  .layout {
+
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: auto;
+    grid-template-areas:
+      "header header header"
+      "header main main"
+      "footer footer footer";
+
+  }
+  header, main, footer{
+
+    width: auto;
+  }
+  
+  .student-Card, .tutor-Card, .admin-Card, .therapist-Card{
+    
+    height: 60%;
+    width: 20%;
+
+  }
+
+  .email-details{
+
+    margin-left: 110px;
+  }
+
+  .swiper-pagination{
+
+    display: none;
+
+  }
+
+  
+
+  .user-registration-links, .social-icon{
+
+    display: block;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+  }
+
+  
+}
+
+@media (max-width: 800px) {
+  
+  #check {
+
+    display: inline;
+  }
+
+  nav {
+
+    justify-content: space-between;
+
+  }
+
+  .list {
+
+    flex-direction: column;
+    height: max-content;
+    background-color: #fff;
+    width: 100%;
+    position: absolute;
+    left: 0%;
+    top: 80px;
+    text-align: left;
+    transition: all 0.5s;
+    transform: scaleY(0);
+    transform-origin: top;
+    box-shadow: 0px 5px 20px -17px rgba(0, 0, 0, 0.34);
+    padding: 0px;
+
+  }
+  
+  .list {
+
+    margin: 20px 0;
+
+  }
+  
+  #toggle:checked ~ .list {
+
+    transform: scaleY(1);
+
+  }
+
+}
+
+@media only screen and (min-width: 480px) {
+  
+  .email-details{
+
+    margin-left: 110px;
+  }
+
+  .services-tutor, .services-councellor, .services-ebooks{
+    
+    display: flex;
+
+  }
+
+  .service-img{
+
+    width: 300px;
+
+  }
+
+  .user-profile-header{
+
+    display: block;
+  }
+
+  .swiper-pagination{
+
+    display: none;
+
+  }
+
+  
+  footer{
+
+    display: block;
+    text-align: center;
+
+  }
+
+  .logo-contact-information, .subscribe{
+
+    margin: 0;
+    padding: 0;
+
+  }
+
+  .subscribe, .logo-contact-information{
+
+    margin: 0;
+    padding: 0;
+
+  }
+
+.social-icon, .logo-contact-information{
+
+    margin: 0;
+    padding: 0;
+
+  }
+  
+  .term-privacy, .year{
+
+    margin: 0;
+    padding: 0;
+  
+  }
+
+  .head-what-we-do, #span{
+
+    display: flex;
+    letter-spacing: normal;
+    justify-content: center;
+    margin-left: 5px;
+
+  }
+  
+
+}
+
+@media only screen and (min-width: 800px) {
+            
+  .Developer-cards{
+
+    display: flex;
+    justify-content: center;  
+    
+  }
+
+  .Bongani, .Kagiso {
+
+    margin-left: 1rem;
+
+  }
+
+  .intro{
+
+    display: block;
+
+  }
+
+  .phone-mail{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+  }
+
+  .phone-details, .email-details{
+
+    margin-left: 20px;
+  }
+
+  .phone, #phone, .mail, #mail{
+
+    margin-left: 10px;
+
+  }
+
+  .join-us-cards{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+  }
+
+  .services-tutor, .services-councellor, .services-ebooks{
+
+    display: flex;
+
+  }
+
+  .about-service{
+
+    text-align: center;
+    justify-content: center;
+    margin-top: 8rem;
+
+  }
+
+  .user-profile-header{
+
+    display: flex;
+  }
+
+  #active{
+
+    width: 80px;
+    height: 50px;
+    color: rgb(5, 223, 38);
+    border: solid mediumspringgreen;
+    border-radius: 10px;
+    text-transform: capitalize;
+    cursor: pointer;
+
+  }
+
+  .swiper-pagination{
+
+    display: block;
+
+  }
+
+  .subscribe{
+
+    display: flex;
+
+  }
+
+  #subscribe-header{
+
+    margin-left: 10px;
+    font-size: 24px;
+
+  }
+
+  .form{
+
+    margin-left: 100px;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  #input{
+
+    width: 300px;
+
+  }
+
+  .logo-contact-information{
+
+    display: flex;   
+    
+  }
+
+
+  .Contact-Info{
+
+    margin-top: 2rem;
+
+  }
+
+  .logo-picture, .Contact-Info{
+
+    margin-left: 25px;
+
+  }
+
+  .user-registration-links{
+    
+    margin-top: 2rem;
+
+  }
+  .user-registration-links, #social-links{
+
+    display: block;
+
+  }
+  
+  .Contact-Info, .user-registration-links{
+
+    margin-left: 5rem;
+
+  }
+
+  .cards{
+                
+    display: flex;
+    justify-content: center;
+
+  }
+
+  .what-we-do{
+
+    display: flex;
+
+  }
+
+  .head-what-we-do{
+
+    display: block;
+    border: solid mediumspringgreen;
+    border-radius: 15px 0 0 15px;
+    border-right: 0px;
+    border-left: 0px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+  }
+
+  #span{
+
+    margin-top: 1.5rem;
+
+  }
+
+  .text-what-we-do{
+
+    border: solid mediumspringgreen;
+    border-radius: 0 15px 15px 0;
+    border-left: 0px;
+    border-right: 0px;
+
+  }
+  
+  .head-what-we-do, .text-what-we-do{
+
+    width: 50%;
+    height: auto;
+
+  }
+
+  .our-aim-text-main, .Join-Us{
+
+    margin-top: 1rem;
+
+  }
+
+  .our-aim-text-main{
+
+    display: flex;
+    justify-content: center;
+    
+
+  }
+
+  .our-aim-text{
+
+    border: solid mediumspringgreen;
+    border-radius: 15px;
+    width: 16.7rem;
+    height: auto;
+    margin-left: 13px;
+
+  }
+
+  .our-aim-text, p{
+
+    margin-top: 10px;
+
+  }
+
+  #wwd{
+
+    
+    font-size: 40px;
+    font-weight: bolder;
+
+  }
+  
+}
+
+

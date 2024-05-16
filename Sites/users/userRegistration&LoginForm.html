@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../../css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="../../css/responsive.css"/>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <link rel="website icon" type="png" href="../../Logo Files/For Web/png/Color logo - no background.png">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/5.0.1/signalr.min.js"></script>
+    
+    <style  >
+
+        .header{
+            margin-top: 1.5rem;
+        }
+        .logo, .h1{
+            margin-top: 2rem;
+        }
+        .student-Card, .tutor-Card, .admin-Card, .therapist-Card{
+            margin-left: 2rem;
+        }
+        .student-Card, .tutor-Card, .admin-Card, .therapist-Card{
+            margin-bottom: 2rem;
+        }
+        .student-Card, .tutor-Card, .admin-Card, .therapist-Card{
+            margin-top: 2rem;
+        }
+        h1, .cards{
+            margin-top: 2rem;
+        }
+        .avatar{
+            width: 50%;
+            height: 30%;
+        }
+        .cards{
+            height: 100%;
+        }
+        
+        #tooltipText{
+
+            position: absolute; 
+            top: 1;       
+            background-color: black;
+            color: white;
+            border-radius: 10px;
+            visibility: hidden;
+            opacity: 1;
+            margin: -85px 95px 35px 0px;
+           
+            
+
+        }
+        #tooltipText_1{
+            position: absolute;   
+            margin: -85px 95px 35px 0px;     
+            background-color: black;
+            color: white;
+            border-radius: 10px;
+            visibility: hidden;
+            opacity: 1;
+            
+        }
+
+        #tooltipText_2{
+            position: absolute; 
+            top: 1;  
+            margin: -140px 95px 35px 0px;                   
+            background-color: black;
+            color: white;
+            border-radius: 10px;
+            visibility: hidden;
+            opacity: 0;
+        }
+
+        #tooltipText_3{
+            position: absolute; 
+            top: 1;  
+            margin: -125px 95px 35px 0px;   
+            background-color: black;
+            color: white;
+            border-radius: 10px;
+            visibility: hidden;
+            opacity: 0;
+        }
+
+        #tooltipText::before, #tooltipText_1::before, #tooltipText_2::before, #tooltipText_3::before{
+            content: "";
+            position: absolute;
+            border: 15px solid;
+            border-color: black;
+            visibility: hidden;
+            opacity: 0;
+            
+        }
+        
+        
+        .student-Card:hover #tooltipText{
+
+            width: 15%;
+            height: auto;
+            visibility: visible;
+            opacity: 1;
+
+        }
+        .tutor-Card:hover #tooltipText_1{
+                        
+            width: 10%;
+            height: auto;
+            visibility: visible;
+            opacity: 1;
+
+        }
+        .therapist-Card:hover #tooltipText_2{
+            
+            width: 10%;
+            height: auto;
+            visibility: visible;
+            opacity: 1;
+
+        }
+        .admin-Card:hover #tooltipText_3{
+            
+            width: 10%;
+            height: auto;
+            visibility: visible;
+            opacity: 1;
+
+        }
+
+        
+        
+
+
+    </style>
+
+</head>
+<body>
+    <div class="layout">
+
+        <center>
+
+            <main>
+
+                <div class="header">
+
+                    <img class="logo" src="../../Logo Files/For Web/png/Color logo - no background.png" />
+                    <h1>Login AS</h1>
+
+                </div>
+
+                    <div class="cards">
+
+                        
+                        <div class="student-Card">
+
+                            <a href="../Forms/Login-Forms/studentsForm.html">
+
+                                <div class="container-card">
+
+                                    <span id="tooltipText">Login or register as student to book a session with tutors and counsellors</span>
+                                    <img class="avatar" src="../../Images/graduates.png" alt="Avatar" />
+                                    <h3>Student</h3>
+    
+                                </div>
+
+                            </a>
+                            
+
+                        </div>
+                    
+
+                        <div class="tutor-Card">
+
+                            <a href="../Forms/Login-Forms/tutorForm.html">
+                                <div class="container-card">
+
+                                    <span id="tooltipText_1">Login or Register as a tutor to assist students</span>
+                                    <img class="avatar" src="../../Images/tutoring.png" alt="Avatar" />
+                                    <h3>Tutor</h3>
+
+                                </div>
+
+                            </a>
+
+                        </div>
+                        <div class="therapist-Card">
+
+                            <a href="../Forms/Login-Forms/counsellor.html">
+                                <div class="container-card">
+
+                                    <span id="tooltipText_2">Login or register as a counsellor help students copy with mental health</span>
+                                    <img class="avatar" src="../../Images/conversation.png" alt="Avatar"/>
+                                    <h3>Counsellor</h3>
+
+                                </div>
+
+                            </a>
+                        </div>
+                        <div class="admin-Card">
+
+                            <a href="../Forms/Login-Forms/adminForm.html">
+                                <div class="container-card">
+
+                                    <span id="tooltipText_3">Login to access users profiles and keep the website updated</span>
+                                    <img class="avatar" src="../../Images/admin.png" alt="Avatar" />
+                                    <h3>Admin</h3>
+
+                                </div>
+
+                            </a>
+
+                        </div>
+
+                    </div>
+                    
+
+                
+                
+
+
+
+            </main>
+
+
+        </center>
+
+    </div>
+</body>
+</html>

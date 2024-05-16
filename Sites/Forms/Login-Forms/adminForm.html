@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../../../css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="../../../css/responsive.css"/>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <link rel="website icon" type="png" href="../../Logo Files/For Web/png/Color logo - no background.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/5.0.1/signalr.min.js"></script>
+
+
+    <style type="text/css">
+
+        #a{
+            color: red;
+        }
+
+        #a:hover{
+
+            color: blue;
+        }
+
+        .admin{
+
+            margin-top: 2rem;
+        }
+        
+        #form-label{
+
+            width: 60%;
+	        height: 25px;
+            max-height: 90px;
+            display: flex;
+            text-align: center;
+	        justify-content: center;
+            margin: 30px auto;
+	        color: #fff;
+	        background: #573b8a;
+	        font-weight: bold;
+	        outline: none;
+	        border: none;
+	        border-radius: 15px;
+	        cursor: pointer;
+           
+        }
+
+        #form-label:hover{
+
+            color: blue;
+        }
+        
+        #btn, .account, .account-2 {
+
+            margin-top: 2rem;
+        }
+
+        .p, #form-label{
+
+            margin: 1.5rem;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div class="layout">
+
+        <center>
+
+            <main>
+
+                <div class="admin">
+
+                    <input type="checkbox" id="chk" aria-hidden="true">
+        
+                   <div class="signup">
+                    
+                        <form action="../PHP/adminLogin.php" id="form" method="get" autocomplete="off">
+                            <label class="label" for="chk" aria-hidden="true">Admin Login</label>
+                            <input type="email" name="admin_Email" placeholder="Email" required="">
+                            <input type="password" name="admin_Password" placeholder="Password" required="">
+                            <button id="btn" class="button">Log In</button>
+                            <div class="account" style="justify-content:center;">
+                                <p class="p">Forgot your password?</p>
+       
+                                <label id="form-label" for="chk" aria-hidden="true">Reset</label>
+
+                            </div>
+                                                       
+                        </form>
+                    </div>
+        
+                    <div class="login" id="reset">
+                        <form action="../PHP/adminResetPassword.php" id="form" method="get" autocomplete="off">
+                            <label class="label" for="chk" aria-hidden="true">Reset Password</label>
+                            <input type="email" name="email" placeholder="Email" required="">
+                            <input type="password" name="adminReset_password" placeholder="Password" required="">
+                            <input type="password" name="confirm_Password" placeholder="Confirm Password" required="">
+                            <button class="button">Reset Password</button>
+                                        
+                        </form>
+                    </div>
+
+
+                </div>
+
+
+            </main>
+
+
+        </center>
+
+    </div>
+    
+</body>
+</html>

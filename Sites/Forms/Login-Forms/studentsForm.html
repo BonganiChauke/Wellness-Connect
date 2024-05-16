@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../../../css/style.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/responsive.css"/>
+    <link rel="stylesheet" href="../../font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="../../font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.min.css">
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <link rel="website icon" type="png" href="../../Logo Files/For Web/png/Color logo - no background.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/5.0.1/signalr.min.js"></script>
+
+    
+    <style type="text/css">
+
+        #a{
+            color: red;
+        }
+        #a:hover{
+            color: blue;
+        }
+        .main{
+            margin-top: 2rem;
+        }
+        
+        #form-label{
+
+            width: 60%;
+	        height: 25px;
+            max-height: 90px;
+            display: flex;
+            text-align: center;
+	        justify-content: center;
+            margin: 30px auto;
+	        color: black;
+	        background: lightgray;
+	        font-weight: bold;
+	        outline: none;
+	        border: none;
+	        border-radius: 15px;
+	        cursor: pointer;
+           
+        }
+
+        #form-label:hover{
+            color: blue;
+        }
+        #btn, .account, .account-2 {
+            margin-top: 2rem;
+        }
+        .p, #form-label{
+            margin: 1rem;
+        }
+
+    </style>
+    
+</head>
+<body onload="document.getElementById('firstName').focus()">
+
+<div class="layout">
+
+    <center>
+
+        <main>
+
+            <div class="main" id="main">  
+
+                <input type="checkbox" id="chk" aria-hidden="true">
+        
+                   <div class="signup" id="signup">
+                    
+                        <form action="../PHP/userRegistrations.php" id="form" method="post" autocomplete="off" spellcheck="true" >
+                            
+                            <label class="label" for="chk" aria-hidden="true">Register</label>
+                            
+                            <input type="text" name="firstName" id="firstName" placeholder="First Name" >
+                            <input type="text" name="lastName" id="lastName" placeholder="Last Name" >
+                            <input type="text" name="reg_Email" id="reg_Email" placeholder="Email" >
+                            <input type="password" name="reg_Password" id="reg_Password" placeholder="Password" >
+                            <input type="password" name="confirm_Password" id="confirm_Password" placeholder="Confirm Password">
+                            <button id="btn" class="button" type="submit">Sign up</button>
+                            <div class="account" style="justify-content:center;">
+                                
+                                <p class="p">Already have an acount?</p>
+                                <label id="form-label"  for="chk" aria-hidden="true">Log In</label>
+
+                            </div>
+                                                       
+                        </form>
+                    </div>
+                    
+        
+                    <div class="login">
+                        <form action="../PHP/userLogin.php" id="formLogin"  autocomplete="off" spellcheck="true">
+                            <label class="label" for="chk" aria-hidden="true">Login</label>
+                            <input type="text" name="email" placeholder="Email" >
+                            <input type="password" name="password" placeholder="Password" >
+                            <button class="button">Login</button>
+                            <div class="account">
+                                <p>Forgot your password?</p>
+                                <label id="reset" class="button">Reset</label>
+
+                            </div>
+                            
+                        </form>
+                    </div>
+                    <script type="text/javascript" src="../../javascript/script.js"></script>
+
+                    
+            </div>
+
+        </main>
+    </center>
+
+</div>   
+</body>
+<script type="text/javascript">
+
+
+
+
+
+</script>
+</html>

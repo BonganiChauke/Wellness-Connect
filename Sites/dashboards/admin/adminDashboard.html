@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.css">
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <link rel="website icon" type="png" href="../../../Logo Files/For Web/png/Color logo - no background.png">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/5.0.1/signalr.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    <link rel="stylesheet" href="../../../css/dashboards.css" />
+
+    <style type="text/css">
+
+        
+
+        
+
+    </style>
+
+</head>
+<body>
+
+    <div class="layout">
+
+        <center>
+
+            <main>
+                
+                <div class="dashboard">              
+
+                    <div class="menu">
+
+                        <input type="checkbox" id="menu-toggle">  
+
+                        <div class="logo-content">
+                            
+                            <div class="logo-img">
+
+                             <img class="logo" src="../../../Logo Files/For Web/png/Color logo - no background.png">
+
+                            </div>
+
+                            <div class="header-icons">
+
+                                <img class="menu-item" id="menu-item1" src="../../../Images/bell.png" >
+                                <img class="menu-item" id="menu-item2" src="../../../Images/settings.png">
+                                <img class="menu-item" id="menu-item3" src="../../../Images/menu.png" >
+
+                            </div>
+                        
+                        </div>
+    
+                        <div class="user-info">
+    
+                            <div class="user-profile">
+    
+                                <img class="user-pic" src="../../../Images/admin.png">
+                                <h4>Admin Name</h4>
+    
+                            </div>
+    
+    
+                        </div>
+    
+                        <div class="side-menu">
+    
+                            <button id="btn" onclick="Recent()"> <img class="menu-icon" src="../../../Images/history.png" > recent activity </button>
+    
+                            <button id="btn" onclick="Messages()"> <img class="menu-icon" src="../../../Images/email.png" > messages </button>
+
+                            <button id="btn" onclick="Manage()"> <img class="menu-icon" src="../../../Images/system.png" > manage users </button>
+
+                            <button id="btn" onclick="ManageContent()"> <img class="menu-icon" src="../../../Images/content-strategy.png" > manage content </button>
+    
+                            <button id="btn" onclick="LogOut()"><img class="menu-icon" src="../../../Images/logout.png" > log out </button>
+
+                        </div>
+ 
+                    </div>                
+
+                    <iframe id="frame" src="../admin/admin-home.html"></iframe>
+
+
+                </div>
+
+                <footer>
+
+
+                    <div class="year" style="background-color: rgb(80, 70, 70); height: 2rem; display: flex; justify-content:center; align-items: center;color: white;">
+
+                        <p> Copyright: &copy; <span id="current-year"> &COPY;</span> Wellness Connect</p>
+        
+                    </div>
+
+                </footer>
+                
+
+            </main>
+
+
+        </center>
+
+
+
+    </div>
+
+    
+</body>
+
+<script type="text/javascript">
+
+
+    function Recent(){
+
+        document.getElementById("frame").src = "../admin/admin-home.html";
+
+    }
+
+    function Messages(){
+
+        document.getElementById("frame").src = "../admin/admin-messages.html";
+
+    }
+
+    function Manage(){
+
+        document.getElementById("frame").src = "../admin/admin-management.html";
+    }
+
+    function ManageContent(){
+        
+        document.getElementById("frame").src = "../admin/admin-webContent.html";
+    }
+
+    function LogOut(){
+
+        window.location = src = "../../main/index.html";
+
+    }
+
+    const year = document.querySelector('#current-year');
+
+    year.innerHTML = new Date().getFullYear();
+
+</script>
+
+
+</html>

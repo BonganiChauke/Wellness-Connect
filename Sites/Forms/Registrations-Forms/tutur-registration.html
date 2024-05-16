@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../../css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="../../css/responsive.css"/>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <link rel="website icon" type="png" href="../../Logo Files/For Web/png/Color logo - no background.png">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/5.0.1/signalr.min.js"></script>
+
+    <style type="text/css">
+
+
+/* Global Stylings */
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+input {
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+}
+
+.width-50 {
+  width: 50%;
+}
+
+.ml-auto {
+  margin-left: auto;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* Progressbar */
+.progressbar {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  counter-reset: step;
+  margin: 2rem 0 4rem;
+}
+
+.progressbar::before,
+.progress {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 4px;
+  width: 100%;
+  background-color: #dcdcdc;
+  z-index: -1;
+}
+
+.progress {
+  background-color: var(--primary-color);
+  width: 0%;
+  transition: 0.3s;
+}
+
+.progress-step {
+  width: 2.1875rem;
+  height: 2.1875rem;
+  background-color: #dcdcdc;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.progress-step::before {
+  counter-increment: step;
+  content: counter(step);
+}
+
+.progress-step::after {
+  content: attr(data-title);
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.progress-step-active {
+  background-color: var(--primary-color);
+  color: #f3f3f3;
+}
+
+/* Form */
+.form, .tutor-login-form {
+  width: 400px;
+  margin: 0 auto;
+  border: 1px solid #ccc;
+  border-radius: 0.35rem;
+  padding: 1.5rem;
+  background: cornflowerblue; 
+  margin-top: 2rem;
+  height: 100vh;
+}
+
+.form-step {
+  display: none;
+  transform-origin: top;
+  animation: animate 0.5s;
+}
+
+.form-step-active {
+  display: block;
+}
+
+.input-group {
+  margin: 2rem 0;
+}
+
+@keyframes animate {
+  from {
+    transform: scale(1, 0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1, 1);
+    opacity: 1;
+  }
+}
+
+/* Button */
+.btns-group {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.btn {
+  padding: 0.75rem;
+  display: block;
+  text-decoration: none;
+  background-color: var(--primary-color);
+  color: #f3f3f3;
+  text-align: center;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.btn:hover {
+  box-shadow: 0 0 0 2px #fff, 0 0 0 3px var(--primary-color);
+}
+
+
+
+
+    </style>
+    
+</head>
+
+<body>
+
+    <div class="layout">
+
+        <center>
+
+            <main>
+
+                <form action="#" class="form" id="form">
+                    <h1 class="text-center">Registration Form</h1>
+                    <!-- Progress bar -->
+                    <div class="progressbar">
+                      <div class="progress" id="progress"></div>
+                      
+                      <div
+                        class="progress-step progress-step-active"
+                        data-title="Details"
+                      ></div>
+                      <div class="progress-step" data-title="Contact"></div>
+                      <div class="progress-step" data-title="Documents"></div>
+                      <div class="progress-step" data-title="Password"></div>
+                    </div>
+              
+                    <!-- Steps -->
+                    <div class="form-step form-step-active">
+                      <div class="input-group">
+                        
+                        <input type="text" name="firstName" id="firstName" placeholder="First Name"/>
+                      </div>
+                      <div class="input-group">
+                        
+                        <input type="text" name="lastName" id="LastName" placeholder="Last Name" />
+                      </div>
+
+                      <div class="account">
+
+                        <p>Already have an account</p>
+                        <button class="btn" onclick="loginForm()">Login</button>
+
+                      </div>
+                      <div class="">
+                        <a href="#" class="btn btn-next width-50 ml-auto">Next</a>
+                      </div>
+
+                    </div>
+                    <div class="form-step">
+                      <div class="input-group">
+
+                        <input type="tel" name="phone" id="phone"  placeholder="Cellphone"/>
+                      </div>
+                      <div class="input-group">
+                        
+                        <input type="text" name="email" id="email" placeholder="Email" />
+                      </div>
+                      <div class="btns-group">
+                        <a href="#" class="btn btn-prev">Previous</a>
+                        <a href="#" class="btn btn-next">Next</a>
+                      </div>
+                    </div>
+                    <div class="form-step">
+                      <div class="input-group">
+                        <label for="cv">CV</label>
+                        <input type="file" name="tutor_CV" id="tutor_CV" />
+                      </div>
+                      <div class="input-group">
+                        <label for="Academic Transcript">Academic Transcript</label>
+                        <input type="file" name="tutor_Transcript" id="tutor_Transcript" />
+                      </div>
+
+                      <div class="input-group">
+                        <label for="Academic Transcript">Character Reference</label>
+                        <input type="file" name="tutor_CharacterReference" id="tutor_CharacterReference" />
+                      </div>
+
+
+                      <div class="btns-group">
+                        <a href="#" class="btn btn-prev">Previous</a>
+                        <a href="#" class="btn btn-next">Next</a>
+                      </div>
+                    </div>
+                    <div class="form-step">
+                      <div class="input-group">
+                        <input type="password" name="password" id="password" placeholder="Password" />
+                      </div>
+                      <div class="input-group">
+                        <input type="password" name="confirmPassword" id="confirmPassword" placeholder="Confirm Password"/>
+                      </div>
+                      <div class="btns-group">
+                        <a href="#" class="btn btn-prev">Previous</a>
+                        <input type="submit" value="Submit" class="btn" />
+                      </div>
+                    </div>
+                  </form>
+
+                  <form class="tutor-login-form" id="tutor-login-form" hidden>
+
+                    <h1>Login</h1>
+
+                    <div class="input-group">
+                      <input type="email" name="tutorLogin-Email" id="password" placeholder="Email" />
+                    </div>
+                    <div class="input-group">
+                      <input type="password" name="tutorLogin-Password" id="tutorLogin-Password" placeholder="Confirm Password"/>
+                    </div>
+
+
+                  </form>
+              
+
+            </main>
+
+
+        </center>
+
+    </div>
+    
+</body>
+<script type="text/javascript">
+
+const prevBtns = document.querySelectorAll(".btn-prev");
+const nextBtns = document.querySelectorAll(".btn-next");
+const progress = document.getElementById("progress");
+const formSteps = document.querySelectorAll(".form-step");
+const progressSteps = document.querySelectorAll(".progress-step");
+
+let formStepsNum = 0;
+
+nextBtns.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    formStepsNum++;
+    updateFormSteps();
+    updateProgressbar();
+  });
+});
+
+prevBtns.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    formStepsNum--;
+    updateFormSteps();
+    updateProgressbar();
+  });
+});
+
+function updateFormSteps() {
+  formSteps.forEach((formStep) => {
+    formStep.classList.contains("form-step-active") &&
+      formStep.classList.remove("form-step-active");
+  });
+
+  formSteps[formStepsNum].classList.add("form-step-active");
+}
+
+function updateProgressbar() {
+  progressSteps.forEach((progressStep, idx) => {
+    if (idx < formStepsNum + 1) {
+      progressStep.classList.add("progress-step-active");
+    } else {
+      progressStep.classList.remove("progress-step-active");
+    }
+  });
+
+  const progressActive = document.querySelectorAll(".progress-step-active");
+
+  progress.style.width =
+    ((progressActive.length - 1) / (progressSteps.length - 1)) * 100 + "%";
+}
+
+function loginForm(){
+
+  var form = document.getElementById("tutor-login-form");
+  var  h = document.getElementById("form");
+  if(h.style.display === "block"){
+
+    form.style.display = "none";
+
+  }
+  
+
+}
+
+
+</script>
+</html>

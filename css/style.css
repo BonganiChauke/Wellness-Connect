@@ -62,65 +62,68 @@ img {
 }
 
 /* nav bar */
-.navbar{
+.navbar {
     background: white;
     box-shadow: var(--box-shadow);
 }
 
-.navbar-nav .nav-link{
+.navbar-nav .nav-link {
     font-weight: 600;
     color: var(--c-dark);
 }
 
-.navbar-nav .nav-link.active{
+.navbar-nav .nav-link.active {
     color: var(--c-brand);
 }
 
 /* sign in nav link and header btn */
-#sign-in-btn, #sign-in-btn-hero{
+#sign-in-btn,
+#sign-in-btn-hero {
     background-color: var(--c-brand);
     color: white;
     text-transform: uppercase;
     border-radius: 5px;
     padding: 10px 24px;
+    text-decoration: none;
 }
 
-#sign-in-btn:hover , #sign-in-btn-hero:hover{
+#sign-in-btn:hover,
+#sign-in-btn-hero:hover {
     background-color: var(--c-brand-light);
     border-color: var(--c-brand-light);
 }
 
 /* hero section */
 #hero {
-    background: linear-gradient(rgba(0,0,0, 0.507), rgba(0,0,0,0.438)), url(../Images/Academics_home.jpg);
+    background: linear-gradient(rgba(0, 0, 0, 0.507), rgba(0, 0, 0, 0.438)), url(../Images/Academics_home.jpg);
     background-position: center;
     background-size: cover;
 }
 
 /* about us section */
-h1 span{
+h1 span {
     color: var(--c-brand);
 }
 
 /* section title */
-.section-title{
+.section-title {
     margin-bottom: 60px;
 }
 
-.section-title .line{
+.section-title .line {
     width: 60px;
     height: 4px;
     background-color: var(--c-brand);
     margin: 16px auto 24px auto;
 }
 
-.section-title p{
+.section-title p {
     max-width: 500px;
     margin-left: auto;
     margin-right: auto;
 }
 
-.iconbox{
+.iconbox {
     width: 80px;
     height: 80px;
     display: inline-flex;
@@ -134,18 +137,18 @@ h1 span{
 }
 
 /* services section */
-.theme-shadow{
+.theme-shadow {
     box-shadow: var(--box-shadow);
     border-radius: 10px;
 }
 
-.service{
+.service {
     position: relative;
     overflow: hidden;
     z-index: 2;
 }
 
-.service::after{
+.service::after {
     content: "";
     width: 40px;
     height: 40px;
@@ -157,18 +160,126 @@ h1 span{
     transition: var(--transition);
 }
 
-.service:hover::after{
+.service:hover::after {
     width: 100%;
     height: 100%;
     background: var(--c-brand);
     z-index: -1;
 }
 
-.service:hover h5, .service:hover p{
+.service:hover h5,
+.service:hover p {
     color: white;
 }
 
-.service:hover .iconbox{
+.service:hover .iconbox {
     background-color: rgba(255, 255, 14, 0.19);
     color: white;
+}
+
+/* contact us section */
+form textarea {
+    resize: none;
+}
+
+#contact {
+    position: relative;
+    z-index: 2;
+}
+
+#contact::after {
+    content: "";
+    width: 100%;
+    height: 70%;
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(var(--c-brand-rgb), 0.8)), url(../Images/pexels-fauxels-3183150.jpg);
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+#contact .form-control {
+    border-radius: 2px;
+}
+
+#contact .form-control:focus {
+    box-shadow: none;
+    border-color: var(--c-brand);
+}
+
+.did-floating-label-content {
+    position: relative;
+    margin-bottom:20px;
+}
+
+
+.did-floating-label {
+    color: #1e4c82;
+    font-size: 15px;
+    position: absolute;
+    pointer-events: none;
+    left: 10px;
+    top: 15%;
+    padding: 0 5px;
+    background: #fff;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+}
+
+.did-floating-input {
+    font-size: 12px;
+    display: block;
+    width: 100%;
+    height: 36px;
+    padding: 0 20px;
+    background: #fff;
+    color: #323840;
+    border: 1px solid #3d85d8;
+    border-radius: 4px;
+    box-sizing: border-box;
+
+    &:focus {
+        outline: none;
+
+        ~.did-floating-label {
+            top: -12px;
+            font-size: 13px;
+        }
+    }
+}
+
+.did-floating-textarea {
+    font-size: 12px;
+    display: block;
+    background: #fff;
+    color: #323840;
+    border: 1px solid #3d85d8;
+    border-radius: 4px;
+    box-sizing: border-box;
+
+    &:focus {
+        outline: none;
+
+        ~.did-floating-label {
+            top: -12px;
+            font-size: 13px;
+        }
+    }
+}
+
+textarea {
+  grid-column: 1 / -1;
+}
+
+.did-floating-input:not(:placeholder-shown) ~ .did-floating-label {
+  top:-12px;
+  font-size:13px;
+}
+
+.did-floating-textarea:not(:placeholder-shown) ~ .did-floating-label {
+  top:-12px;
+  font-size:13px;
 }

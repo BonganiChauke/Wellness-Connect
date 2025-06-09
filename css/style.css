@@ -353,3 +353,14 @@ footer .fa{
 footer .devs p{
     color: green;
 }
+
+/* impact section */
+#impact{
+    background: linear-gradient(rgba(0, 0, 0, 0.2),rgba(var(--c-brand-rgb), 0.8)), url(../Images/pexels-fauxels-impact.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+#impact h1 h6{
+    font-style: bold;
+}

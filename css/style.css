@@ -87,6 +87,15 @@ img {
     text-decoration: none;
 }
 
+#sign-in-btn-hero-impact{
+    text-transform: uppercase;
+    border-radius: 5px;
+    padding: 10px 24px;
+    text-decoration: none;
+    color: black;
+    background-color: white;
+}
+
 #sign-in-btn:hover,
 #sign-in-btn-hero:hover {
     background-color: var(--c-brand-light);

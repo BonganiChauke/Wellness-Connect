@@ -373,3 +373,40 @@ footer .devs p{
 #impact h1 h6{
     font-style: bold;
 }
+
+/* developer section  */
+.team-member{
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+    padding: 20px;
+}
+.team-member img{
+    width: 125px;
+    height: 125px;
+    border-radius: 100px;
+}
+
+.social-dev-icons {
+    display: flex;
+    justify-content: center;
+}
+
+.social-dev-icons a {
+    width: 40px;
+    height: 40px;
+    background-color: var(--c-brand);
+    border-radius: 2px solid var(--primary);
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100px;
+    text-decoration: none;
+    margin-left: 5px;
+    transition: all 0.5s ease;
+}
+
+.social-dev-icons a:hover {
+    background-color: transparent;
+    color: var(--c-brand);
+}

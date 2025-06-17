@@ -177,7 +177,7 @@
                 </div>
                 <div class="row justify-content-center">
                     <div class="col-lg-8">
-                        <form class="row g-3 p-lg-5 p-4 bg-white theme-shadow">
+                        <form class="row g-3 p-lg-5 p-4 bg-white theme-shadow" id="contact-form">
                             <!-- 2 column grid layout with text inputs for the first and last names -->
                             <div class="row mt-3 mb-4">
                                 <div class="col">
@@ -185,7 +185,9 @@
                                         <input type="text" id="first_name" class="form-control did-floating-input"
                                             placeholder="" />
                                         <label class="form-label did-floating-label" for="first_name">First Name</label>
-                                        <span class="text-danger"></span>
+                                        <div class="error-txt text-danger" style="visibility: hidden;">
+                                            <span class="error-msg"></span>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="col">
@@ -229,8 +231,43 @@
                             </div>
 
                             <!-- Submit button -->
-                            <button data-mdb-ripple-init type="button" class="btn btn-primary btn-block mb-4">Send
+                            <button data-mdb-ripple-init type="submit" class="btn btn-primary btn-block mb-4">Send
                                 Message</button>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+                                <symbol id="check-circle-fill" fill="currentColor" viewBox="0 0 16 16">
+                                    <path
+                                        d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+                                </symbol>
+                                <symbol id="info-fill" fill="currentColor" viewBox="0 0 16 16">
+                                    <path
+                                        d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z" />
+                                </symbol>
+                                <symbol id="exclamation-triangle-fill" fill="currentColor" viewBox="0 0 16 16">
+                                    <path
+                                        d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                                </symbol>
+                            </svg>
+
+                            <div class="alert alert-success" id="alert-success" role="alert" style="display: none;">
+                                <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img"
+                                    aria-label="Success:">
+                                    <use xlink:href="#check-circle-fill" />
+                                </svg>
+                                <span class="success-message">Form successful submitted!</span>
+                            </div>
+
+                            <div class="alert alert-danger d-flex align-items-center d-none" id="alert-danger"
+                                role="alert">
+                                <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img"
+                                    aria-label="Danger:">
+                                    <use xlink:href="#exclamation-triangle-fill" />
+                                </svg>
+                                <div id="error-alert">
+                                    An example danger alert with an icon
+                                </div>
+                            </div>
+
                         </form>
                     </div>
 
@@ -369,12 +406,16 @@
                     <div class="col-lg-3 col-sm-4" data-aos="fade-down" data-aos-delay="1200">
                         <div class="team-member card-effect text-center">
                             <img src="../../Images/man-profile.png" alt="Developer Image">
-                            <h5 class="mb-0 mt-1" data-aos="fade-left" data-aos-delay="1500">Bongani Chauke</h5>
-                            <h6 class="mb-2" data-aos="fade-right" data-aos-delay="1800"> Software Developer & Data Analyst </h6>
-                            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, laboriosam! </p>
-                            <div class="social-dev-icons" data-aos="fade-down" data-aos-delay="2000">
-                                <a target="_blank" href="https://www.linkedin.com/in/bongani-chauke-0a0944205/"><i class="fa-brands fa-linkedin"></i></a>
-                                <a target="_blank" href="https://github.com/BonganiChauke"><i class="fa-brands fa-github"></i></a>
+                            <h5 class="mb-0 mt-1" data-aos="fade-left" data-aos-delay="1300">Bongani Chauke</h5>
+                            <h6 class="mb-2" data-aos="fade-right" data-aos-delay="1400"> Software Developer & Data
+                                Analyst </h6>
+                            <p data-aos="fade-left" data-aos-delay="800"> Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Molestiae, laboriosam! </p>
+                            <div class="social-dev-icons" data-aos="fade-down" data-aos-delay="1000">
+                                <a target="_blank" href="https://www.linkedin.com/in/bongani-chauke-0a0944205/"><i
+                                        class="fa-brands fa-linkedin"></i></a>
+                                <a target="_blank" href="https://github.com/BonganiChauke"><i
+                                        class="fa-brands fa-github"></i></a>
                             </div>
                         </div>
                     </div>
@@ -382,12 +423,15 @@
                     <div class="col-lg-3 col-sm-4" data-aos="fade-down" data-aos-delay="1200">
                         <div class="team-member card-effect text-center">
                             <img src="../../Images/man-profile.png" alt="Developer Image">
-                            <h5 class="mb-0 mt-1" data-aos="fade-left" data-aos-delay="1500">Kagiso Koole</h5>
-                            <h6 class="mb-2" data-aos="fade-right" data-aos-delay="1800"> Software Developer </h6>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, vitae.</p>
-                            <div class="social-dev-icons" data-aos="fade-down" data-aos-delay="2000">
-                                <a target="_blank" href="https://www.linkedin.com/in/kagiso-koole-77b20024a/"><i class="fa-brands fa-linkedin"></i></a>
-                                <a target="_blank" href="https://github.com/kagisoKennethKoole"><i class="fa-brands fa-github"></i></a>
+                            <h5 class="mb-0 mt-1" data-aos="fade-left" data-aos-delay="1300">Kagiso Koole</h5>
+                            <h6 class="mb-2" data-aos="fade-right" data-aos-delay="1000"> Software Developer </h6>
+                            <p data-aos="fade-right" data-aos-delay="800">Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Ipsa, vitae.</p>
+                            <div class="social-dev-icons" data-aos="fade-down" data-aos-delay="1000">
+                                <a target="_blank" href="https://www.linkedin.com/in/kagiso-koole-77b20024a/"><i
+                                        class="fa-brands fa-linkedin"></i></a>
+                                <a target="_blank" href="https://github.com/kagisoKennethKoole"><i
+                                        class="fa-brands fa-github"></i></a>
                             </div>
                         </div>
                     </div>
@@ -468,8 +512,10 @@
                             <p class="col-auto">&copy; 2025 Wellness Connect. All Rights Reserved</p>
                         </div>
                         <div class="col-auto devs">
-                            <p class="mb-0">Created By <a target="_blank" href="https://www.linkedin.com/in/bongani-chauke-0a0944205/">Bongani Chauke</a></p>
-                            <p class="mb-0 ">And <a target="_blank" href="https://www.linkedin.com/in/kagiso-koole-77b20024a/">Kagiso koole</a></p>
+                            <p class="mb-0">Created By <a target="_blank"
+                                    href="https://www.linkedin.com/in/bongani-chauke-0a0944205/">Bongani Chauke</a></p>
+                            <p class="mb-0 ">And <a target="_blank"
+                                    href="https://www.linkedin.com/in/kagiso-koole-77b20024a/">Kagiso koole</a></p>
                         </div>
                     </div>
                 </div>

@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link rel="website icon" type="png" href="../../Logo Files/For Web/png/Color logo - no background.png">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/5.0.1/signalr.min.js"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <script src="https://unicons.iconscout.com/release/v4.0.8/script/monochrome/bundle.js"></script>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/solid.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../../css/style.css">
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+
+<body>
+    <!-- nav bar  -->
+    <nav class="navbar navbar-expand-lg bg-tertiary sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="../../Logo Files/For Web/svg/Color logo - no background.svg" width="100" height="100"
+                    alt="Logo" class="logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav navbarSupportedContent">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#hero">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#impact">Impact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#developers">Developers</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" id="sign-in-btn" href="/Sites/main/Login.html">Sign In</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+
+    </nav>
+    <main>
+        <section class="vh-100">
+            <div class="container py-5 h-100">
+                <div class="row d-flex justify-content-center align-items-center h-100">
+                    <div class="col col-xl-10">
+                        <div class="card" style="border-radius: 1rem;">
+                            <div class="row g-0">
+                                <div class="col-md-6 col-lg-5 d-none d-md-block">
+                                    <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/img1.webp"
+                                        alt="login form" class="img-fluid" style="border-radius: 1rem 0 0 1rem;" />
+                                </div>
+                                <div class="col-md-6 col-lg-7 d-flex align-items-center">
+                                    <div class="card-body p-4 p-lg-5 text-black">
+
+                                        <form>
+
+                                            <div class="d-flex align-items-center mb-3 pb-1">
+                                                <img src="../../Logo Files/For Web/svg/Color logo - no background.svg"
+                                                    width="100" height="100" alt="Logo" class="logo">
+                                            </div>
+
+                                            <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Sign into your
+                                                account</h5>
+
+                                            <div class="col">
+                                                <!-- Email input -->
+                                                <div class="form-outline mb-4 did-floating-label-content">
+                                                    <input type="email" id="email"
+                                                        class="form-control did-floating-input" inputmode="email"
+                                                        placeholder="" />
+                                                    <label class="form-label did-floating-label"
+                                                        for="email">Email</label>
+                                                    <span class="text-danger"></span>
+                                                </div>
+                                            </div>
+
+                                            <div class="col">
+                                                <!-- Email input -->
+                                                <div class="form-outline mb-4 did-floating-label-content">
+                                                    <input type="password" id="password"
+                                                        class="form-control did-floating-input" inputmode="password"
+                                                        placeholder="" />
+                                                    <label class="form-label did-floating-label"
+                                                        for="email">Password</label>
+                                                    <span class="text-danger"></span>
+                                                    <i class="fa-solid fa-eye position-absolute" id="togglePassword"
+                                                        style="top: 50%; right: 15px; transform: translateY(-50%); cursor: pointer;"></i>
+                                                </div>
+                                            </div>
+
+                                            <div class="pt-1 mb-4">
+                                                <button data-mdb-button-init data-mdb-ripple-init
+                                                    class="btn btn-dark btn-lg btn-block" type="button">Login</button>
+                                            </div>
+
+                                            <a class="small text-muted" href="#!">Forgot password?</a>
+                                            <p class="mb-5 pb-lg-2" style="color: #393f81;">Don't have an account? <a
+                                                    href="#!" style="color: #393f81;">Register here</a></p>
+                                            <a href="#!" class="small text-muted">Terms of use.</a>
+                                            <a href="#!" class="small text-muted">Privacy policy</a>
+                                        </form>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="bg-dark text-white">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row gy-5">
+                    <div class="col-lg-3 col-sm-6" data-aos="fade-down" data-aos-delay="500">
+                        <a href="#hero"><img class="logo"
+                                src="../../Logo Files/For Web/png/Color logo - no background.png" width="150"
+                                height="150" alt="Logo"></a>
+                        <div class="line"></div>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                        <div class="social-icons">
+                            <a target="_blank" href="https://twitter.com/"><i class="ri-twitter-x-line"></i></a>
+                            <a target="_blank" href="https://www.instagram.com/"><i class="ri-instagram-line"></i></a>
+                            <a target="_blank" href="https://www.facebook.com/?_rdr"><i
+                                    class="ri-facebook-circle-fill"></i></a>
+                            <a target="_blank" href="https://www.tiktok.com/en/"><i class="ri-tiktok-line"></i></a>
+                            <a target="_blank" href="https://za.linkedin.com/"><i class="ri-linkedin-line"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-sm-6" data-aos="fade-down" data-aos-delay="800">
+                        <h5>Quick Links</h5>
+                        <div class="line"></div>
+                        <ul>
+                            <li><a href="#about">About us</a></li>
+                            <li><a href="#contact">Contact us</a></li>
+                            <li><a href="#services">Services</a></li>
+                            <li><a href="#developers">Developers</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-3 col-sm-6" data-aos="fade-down" data-aos-delay="1000">
+                        <h5>Services</h5>
+                        <div class="line"></div>
+                        <p>Therapy</p>
+                        <p>Past Papers</p>
+                        <p>Academic Support</p>
+                        <p>Toturing</p>
+                        <p></p>
+                        <p></p>
+                    </div>
+
+
+                    <div class="col-lg-3 col-sm-6" data-aos="fade-down" data-aos-delay="1200">
+                        <h5>Contact Us</h5>
+                        <div class="line"></div>
+                        <div class="d-flex contact-icon mb-4">
+                            <i class="fa fa-map-marker" aria-hidden="true"></i>
+                            <a target="_blank" style="margin-left: 30px;"
+                                href="https://maps.app.goo.gl/uandqZdn9DrgWoCm7">Johannesburg</a>
+                        </div>
+                        <div class="d-flex contact-icon mb-4">
+                            <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                            <a href="mailto:info@wellnessconnect.com">info@wellnessconnect.com</a>
+                        </div>
+                        <div class="d-flex contact-icon mb-2">
+                            <i class="fa fa-phone" aria-hidden="true"></i>
+                            <a style="margin-left: 25px;" href="tel:0832321239">0832321239</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="container">
+                    <div class="row g-4 justify-content-between">
+                        <div class="col-auto">
+                            <p class="col-auto">&copy; 2025 Wellness Connect. All Rights Reserved</p>
+                        </div>
+                        <div class="col-auto devs">
+                            <p class="mb-0">Created By <a target="_blank"
+                                    href="https://www.linkedin.com/in/bongani-chauke-0a0944205/">Bongani Chauke</a></p>
+                            <p class="mb-0 ">And <a target="_blank"
+                                    href="https://www.linkedin.com/in/kagiso-koole-77b20024a/">Kagiso koole</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="../../javascript/script.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+</body>
+<script>
+    const togglePassword = document.getElementById('togglePassword');
+const passwordInput = document.getElementById('password');
+
+togglePassword.addEventListener('click', function () {
+    const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+    passwordInput.setAttribute('type', type);
+    this.classList.toggle('fa-eye');
+    this.classList.toggle('fa-eye-slash');
+});
+</script>
+</html>

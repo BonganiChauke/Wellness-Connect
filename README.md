@@ -16,9 +16,6 @@ A comprehensive digital wellness platform designed to connect individuals with h
 ### Prerequisites
 
 Before running this application, make sure you have the following installed:
-
-- [Node.js](https://nodejs.org/) (version 14.x or higher)
-- [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)
 - [Git](https://git-scm.com/)
 - [VS Code](https://code.visualstudio.com/)
 
@@ -29,29 +26,6 @@ Before running this application, make sure you have the following installed:
    git clone https://github.com/BonganiChauke/Wellness-Connect.git
    cd Wellness-Connect
    ```
-
-2. **Install dependencies**
-   ```bash
-   npm install
-   # or
-   yarn install
-   ```
-
-3. **Set up environment variables**
-   ```bash
-   cp .env.example .env
-   ```
-   Edit the `.env` file with your configuration settings.
-
-4. **Start the development server**
-   ```bash
-   npm start
-   # or
-   yarn start
-   ```
-
-5. **Open your browser**
-   Navigate to `http://localhost:3000` to view the application.
 
 ## 🛠️ Technology Stack
 
@@ -117,69 +91,6 @@ We welcome contributions from the community! Here's how you can help:
 - Ensure responsive design compatibility
 - Follow accessibility best practices
 
-## 📋 API Documentation
-
-### Authentication Endpoints
-```
-POST /api/auth/register - User registration
-POST /api/auth/login - User login
-POST /api/auth/logout - User logout
-GET /api/auth/profile - Get user profile
-```
-
-### Wellness Endpoints
-```
-GET /api/wellness/goals - Get user goals
-POST /api/wellness/goals - Create new goal
-PUT /api/wellness/goals/:id - Update goal
-DELETE /api/wellness/goals/:id - Delete goal
-POST /api/wellness/tracking - Log wellness data
-GET /api/wellness/progress - Get progress analytics
-```
-
-### Community Endpoints
-```
-GET /api/community/posts - Get community posts
-POST /api/community/posts - Create new post
-GET /api/community/users - Get community members
-POST /api/community/connect - Connect with user
-```
-
-## 🧪 Testing
-
-Run the test suite:
-
-```bash
-# Run all tests
-npm test
-
-# Run tests in watch mode
-npm test -- --watch
-
-# Run tests with coverage
-npm test -- --coverage
-
-# Run specific test file
-npm test -- ComponentName.test.js
-```
-
-## 🚀 Deployment
-
-### Development
-```bash
-npm run dev
-```
-
-### Production Build
-```bash
-npm run build
-npm run start:prod
-```
-
-### Docker Deployment
-```bash
-docker build -t wellness-connect .
-docker run -p 3000:3000 wellness-connect
 ```
 
 ## 📄 License
@@ -209,4 +120,4 @@ If you have any questions or need help:
 
 **Made with ❤️ for the wellness community**
 
-*Last updated: June 2025*
+*Last updated: August 2025*
